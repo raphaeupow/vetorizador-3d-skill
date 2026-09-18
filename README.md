@@ -7,7 +7,9 @@ Ela orienta o Codex a produzir PNGs de alta resolucao, com perspectiva corrigida
 ## Saidas esperadas
 
 - PNG geral em alta resolucao, sem textura, sombra ou brilho.
-- PNGs separados por camada/parte, preferencialmente com fundo transparente.
+- PNGs separados por camada/parte, sempre com fundo transparente.
+- Todos os PNGs individuais com exatamente a mesma largura, altura e proporcao do PNG geral.
+- Cada elemento mantido na coordenada original, sem recorte pelo conteudo e sem centralizacao, para sobreposicao imediata no Inkscape.
 - Cores solidas distintas para base, borda, relevo, baixo-relevo, simbolo, textos e furos.
 - ZIP quando houver muitos arquivos.
 - Nota de ambiguidades para trechos pouco legiveis.
@@ -23,6 +25,8 @@ O caso de referencia e uma placa Chrysler do Brasil S.A. com textos em relevo e 
 - `ACUMULADORES VULCANIA S.A.`
 
 O texto `ACUMULADORES VULCANIA S.A.` e um ponto critico: ele nao deve ser reduzido ou redesenhado fora da proporcao original.
+
+O alinhamento das camadas tambem e obrigatorio: cada PNG individual usa a tela completa do PNG geral. Ao importar os arquivos na mesma coordenada do Inkscape, todas as partes devem se encaixar sem ajuste manual.
 
 ## Estrutura
 

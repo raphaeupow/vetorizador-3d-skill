@@ -27,6 +27,20 @@ Este caso vem da conversa que originou a skill e deve ser usado como teste visua
 - Usar sombra, textura ou brilho para representar relevo.
 - Inventar caracteres quando a foto nao permitir leitura segura.
 - Entregar apenas um arquivo geral quando as partes precisam ser separadas.
+- Recortar cada PNG pelo limite do proprio elemento.
+- Centralizar simbolos, textos, bordas ou furos nos PNGs individuais.
+- Gerar camadas com dimensoes ou proporcoes diferentes do PNG geral.
+
+## Teste De Alinhamento Das Camadas
+
+Para este caso de referencia, cada PNG individual deve ter exatamente a mesma largura e altura em pixels do PNG geral, com transparencia fora do elemento. Simbolo, textos, borda, circulo/furo e base devem permanecer nas coordenadas da composicao corrigida.
+
+Valide antes da entrega:
+
+- dimensoes identicas entre o PNG geral e todos os PNGs individuais;
+- nenhuma camada recortada pelo conteudo;
+- nenhum elemento centralizado ou reposicionado isoladamente;
+- sobreposicao das camadas reconstruindo o PNG geral sem deslocamento, escala ou rotacao manual no Inkscape.
 
 ## Cores Sugeridas Para Separacao
 

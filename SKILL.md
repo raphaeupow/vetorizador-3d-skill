@@ -17,7 +17,7 @@ Entregue:
 
 - Um PNG geral em alta resolucao, com a placa/logo em vista frontal, perspectiva corrigida, sem textura, sem brilho, sem sombra e sem simulacao de relevo.
 - Cores solidas e distintas para todos os elementos separaveis: base, simbolo, texto principal, cada grupo de texto secundario, borda, relevo, baixo-relevo, circulo/furo e qualquer detalhe preto sobre preto.
-- PNGs separados por parte/camada, preferencialmente com fundo transparente.
+- PNGs separados por parte/camada, sempre com fundo transparente e exatamente as mesmas dimensoes em pixels e a mesma proporcao do PNG geral.
 - Um ZIP quando houver muitos PNGs ou quando isso deixar a entrega mais organizada.
 - Uma nota curta de ambiguidades quando qualquer texto ou detalhe nao estiver legivel o suficiente.
 
@@ -34,6 +34,15 @@ Nao invente letras, numeros, marcas ou ornamentos ilegiveis. Preserve o que for 
 - Mantenha a orientacao final natural de leitura, salvo pedido contrario.
 - Quando a foto tiver distorcao, sujeira, reflexo ou dedo cobrindo parte da peca, sinalize a limitacao.
 
+### Regra Fixa De Alinhamento Das Camadas
+
+- Todos os PNGs individuais devem usar uma tela com exatamente a mesma largura e altura, em pixels, do PNG geral.
+- Preserve a mesma origem de coordenadas e a mesma transformacao de perspectiva em todos os arquivos.
+- Mantenha cada elemento precisamente em sua posicao original na composicao; todo o restante da tela deve ficar transparente.
+- Nunca recorte a tela ao limite do elemento, nunca redimensione uma camada isoladamente e nunca centralize o elemento.
+- Ao importar todos os PNGs no Inkscape na mesma coordenada, as camadas devem se sobrepor imediatamente e reconstruir a composicao, sem ajuste manual.
+- Antes da entrega, confira programaticamente as dimensoes de todos os PNGs e faca uma verificacao visual da sobreposicao.
+
 ## Camadas Recomendadas
 
 Adapte os nomes as pecas reais, mas prefira separar:
@@ -48,7 +57,7 @@ Adapte os nomes as pecas reais, mas prefira separar:
 - `circulo-furo`: furos, circulos ou marcas circulares.
 - `ambiguidade`: areas ilegíveis ou que exigem confirmacao.
 
-Use fundo transparente nos PNGs individuais sempre que possivel. No PNG geral, use fundo transparente ou branco neutro conforme for mais util para visualizacao; avise qual foi usado.
+Use fundo transparente em todos os PNGs individuais. Cada arquivo individual deve manter a tela completa do PNG geral e conter apenas o elemento da camada em sua coordenada original. No PNG geral, use fundo transparente ou branco neutro conforme for mais util para visualizacao; avise qual foi usado.
 
 ## Fluxo De Trabalho
 
@@ -57,10 +66,11 @@ Use fundo transparente nos PNGs individuais sempre que possivel. No PNG geral, u
 3. Remova textura, sombra e reflexo do resultado final; mantenha apenas formas solidas.
 4. Atribua uma cor distinta por parte/camada. Escolha cores com contraste forte entre si para facilitar selecao por cor no Inkscape.
 5. Preserve tamanho relativo, alinhamento, espessura visual e espacamento dos textos.
-6. Separe as camadas em PNGs individuais com nomes claros.
+6. Separe as camadas em PNGs individuais com nomes claros, mantendo em todas a tela completa, as dimensoes e as coordenadas do PNG geral.
 7. Gere um PNG geral em resolucao alta o bastante para vetorizacao, preferencialmente pelo menos 3000 px no maior lado quando a entrada permitir.
 8. Se houver muitos arquivos, entregue tambem um ZIP.
-9. Inclua uma lista breve de ambiguidades ou trechos que nao foram inferidos.
+9. Valide que todos os PNGs individuais tenham largura e altura identicas ao PNG geral e que a sobreposicao preserve exatamente a composicao.
+10. Inclua uma lista breve de ambiguidades ou trechos que nao foram inferidos.
 
 ## Caso De Referencia Chrysler
 
